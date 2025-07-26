@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 ﻿using Spectre.Console;
+=======
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Spectre.Console;
+>>>>>>> 2943c15397df67d04d537e42f748e822ad2b20e6
 
 namespace Flashcards
 {
