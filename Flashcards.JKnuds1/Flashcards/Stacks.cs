@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 using Dapper;
 using Spectre.Console;
 
@@ -30,14 +25,14 @@ namespace Flashcards
         {
             List<string> stacks = GetStack();
             var table = new Table();
-            
+
             table.AddColumn(" ");
             table.AddColumn(new TableColumn("[bold]Stack Names[/]").Centered());
             table.Border = TableBorder.SimpleHeavy;
             table.AddRow(" ");
             foreach (string stack in stacks)
             {
-                table.AddRow("-",stack);
+                table.AddRow("-", stack);
             }
             AnsiConsole.Write(table);
             Console.WriteLine("Press Enter to go back to the menu...");
@@ -51,7 +46,7 @@ namespace Flashcards
             Console.WriteLine("Insert the name of the stack.\n");
             string name = Console.ReadLine();
 
-            while (!CheckNameInStack(name)|| name.Trim() == "")
+            while (!CheckNameInStack(name) || name.Trim() == "")
             {
                 Console.WriteLine("Input is either a duplicate or empty.\nPlease try again...\n");
                 name = Console.ReadLine();

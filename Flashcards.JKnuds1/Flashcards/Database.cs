@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
-using System.Data;
 using Dapper;
 
 namespace Flashcards
@@ -27,9 +22,9 @@ namespace Flashcards
                     Console.WriteLine("Connection failed");
                     Console.WriteLine(ex.Message);
                 }
-                
+
             }
-        Console.WriteLine("Finished");
+            Console.WriteLine("Finished");
         }
         internal static void CreateFlashCardTable()
         {
